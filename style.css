@@ -51,7 +51,7 @@ nav .github-icon {
 
 body.fade-in {
     opacity: 0;
-    animation: fadeIn 1.5s ease-in forwards;
+    animation: fadeIn 1.0s ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -69,12 +69,11 @@ body.fade-in {
 .skills .card:hover {
     transform: scale(1.05);
     transition: transform 0.5s ease;
-    box-shadow: 0 4px 15px rgba(100, 244, 171, 0.4);
 }
 
 .project img:hover {
-    transform: scale(1.06);
-    transition: transform 0.3s ease;
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
     filter: brightness(1.1);
 }
 
