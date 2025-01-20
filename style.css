@@ -39,6 +39,45 @@ nav .github-icon {
     margin: 20px 0;
 }
 
+.divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ffffff, #ffffff, #ffffff);
+    margin: 30px 0;
+    opacity: 0;
+    animation: fadeInDivider 1s ease-in forwards;
+    animation-delay: 1s;
+}
+
+body.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDivider {
+    to {
+        opacity: 1;
+    }
+}
+
+.skills .card:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 15px rgba(100, 244, 171, 0.4);
+}
+
+.project img:hover {
+    transform: scale(1.06);
+    transition: transform 0.3s ease;
+    filter: brightness(1.1);
+}
+
 .skills {
     text-align: center;
     padding: 30px 20px;
