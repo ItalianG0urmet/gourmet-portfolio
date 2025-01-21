@@ -1,3 +1,4 @@
+//By x2Loreeh
 var data = [
     {
       AboutDevTypeText: "Welcome to my Portfolio! \n "
