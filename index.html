@@ -7,48 +7,62 @@
     <link rel="icon" href="img/icon.png" type="image/png">
     <title>Pankov Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
 </head>
 
 <body class="fade-in">
 
+
+    
     <nav>
         <div class="nav-bar">
-            <a href="#">Home</a>
+            <a href="#" >Home</a>
             <a href="https://github.com/ItalianG0urmet/" target="_blank" class="github-link">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="github-icon">
             </a>
         </div>
     </nav>
     
-
     <div class="header-section">
-        <h1>Hi, I'm Francesco Pankov</h1>
-        <p>I'm an 18-year-old developer from Italy.</p>
-        <p>I studied at an economics school and pursued IT-related </p>
-        <p>subjects in my free time.</p>
+        <div class="container">
+            <img src="./img/logo.jpg" alt="logo" width="150" height="150" class="header__img">
+            <span id="AboutDevTypeText" class="typeing"></span></span>
+        </div>
     </div>
 
+    <hr class="divider">
+
+    
     <section class="skills">
         <h1>My Skills</h1>
-        <div class="card">
+        <div class="card" onclick="showSkillDetails('linux')">
             <h3>Linux</h3>
-            <p>Years of experience using Linux, gaining in-depth knowledge of its systems and tools.</p>
+            <p>Click for more details</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="showSkillDetails('reverse-engineering')">
             <h3>Reverse Engineering</h3>
-            <p>Experienced in analyzing software with tools like Ghidra and IDA Pro for insights and solutions.</p>
+            <p>Click for more details</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="showSkillDetails('java')">
             <h3>Java</h3>
-            <p>Started programming with Java at a young age, building strong expertise through various projects.</p>
+            <p>Click for more details</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="showSkillDetails('spigot')">
             <h3>Spigot</h3>
-            <p>Developed multiple Minecraft plugins, including private ones, showcasing advanced coding skills.</p>
+            <p>Click for more details</p>
         </div>
     </section>
+    
+    <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
+    <div id="skill-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+        </div>
+    </div>
+    
 
-    <!-- Linea di separazione con animazione -->
     <hr class="divider">
 
     <section class="project-section">
@@ -71,6 +85,8 @@
             </div>
         </div>
     </section>
+
+    
 </body>
 
 </html>
