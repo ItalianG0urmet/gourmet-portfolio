@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing skills and projects in software development.">
     <link rel="icon" href="img/icon.png" type="image/png">
     <title>Pankov Portfolio</title>
     <link rel="stylesheet" href="style.css">
@@ -11,48 +12,37 @@
 </head>
 
 <body class="fade-in">
-
-
-    
-    <nav>
-        <div class="nav-bar">
-            <a href="#" >Home</a>
-            <a href="https://github.com/ItalianG0urmet/" target="_blank" class="github-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="github-icon">
-            </a>
-        </div>
-    </nav>
-    
-    <div class="header-section">
+    <header class="header-section">
         <div class="container">
-            <img src="./img/logo.jpg" alt="logo" width="150" height="150" class="header__img">
-            <span id="AboutDevTypeText" class="typeing"></span></span>
+            <img src="./img/logo.jpg" alt="Pankov Logo" width="150" height="150" class="header__img">
+            <h1 id="AboutDevTypeText" class="typing"></h1>
         </div>
-    </div>
+    </header>
 
     <hr class="divider">
 
-    
-    <section class="skills">
-        <h1>My Skills</h1>
-        <div class="card" onclick="showSkillDetails('linux')">
-            <h3>Linux</h3>
-            <p>Click for more details</p>
-        </div>
-        <div class="card" onclick="showSkillDetails('reverse-engineering')">
-            <h3>Reverse Engineering</h3>
-            <p>Click for more details</p>
-        </div>
-        <div class="card" onclick="showSkillDetails('java')">
-            <h3>Java</h3>
-            <p>Click for more details</p>
-        </div>
-        <div class="card" onclick="showSkillDetails('spigot')">
-            <h3>Spigot</h3>
-            <p>Click for more details</p>
+    <section class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="card" onclick="showSkillDetails('linux')">
+                <h3>Linux</h3>
+                <p>Click for more details</p>
+            </div>
+            <div class="card" onclick="showSkillDetails('reverse-engineering')">
+                <h3>Reverse Engineering</h3>
+                <p>Click for more details</p>
+            </div>
+            <div class="card" onclick="showSkillDetails('java')">
+                <h3>Java</h3>
+                <p>Click for more details</p>
+            </div>
+            <div class="card" onclick="showSkillDetails('spigot')">
+                <h3>Spigot</h3>
+                <p>Click for more details</p>
+            </div>
         </div>
     </section>
-    
+
     <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
     <div id="skill-popup" class="popup">
         <div class="popup-content">
@@ -61,32 +51,35 @@
             <p id="popup-description"></p>
         </div>
     </div>
-    
 
     <hr class="divider">
 
     <section class="project-section">
+        <h2>Projects</h2>
         <div class="project">
-            <img src="img/mem.png" alt="Project 1">
-            <div>
-                <h2>Project 1: Linux Memory Dumper</h2>
-                <p class="project-description">
+            <img src="img/mem.png" alt="Linux Memory Dumper Project">
+            <div class="project-details">
+                <h3>Linux Memory Dumper</h3>
+                <p>
                     🛠️ <strong>MemDumper</strong> is a utility to dump files used by any application in Linux. 
                     It relies on the <code>/proc/</code> directory, which is native to Linux, to obtain this information. 
-                    (This program is not complete and is still in the alpha stage.)
+                    (This program is still in the alpha stage.)
                 </p>
             </div>
         </div>
 
         <div class="project">
-            <img src="img/coming.png" alt="Project 2">
-            <div>
-                <h2>Project 2: Coming soon...</h2>
+            <img src="img/coming.png" alt="Coming Soon Project">
+            <div class="project-details">
+                <h3>Project 2: Coming Soon...</h3>
+                <p>Stay tuned for more exciting projects!</p>
             </div>
         </div>
     </section>
 
-    
+    <footer class="footer-section">
+        <p>&copy; 2023 Pankov. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
