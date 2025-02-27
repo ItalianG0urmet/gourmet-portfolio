@@ -1,29 +1,31 @@
-//By x2Loreeh
-var data = [
-    {
+// Typing Effect 
+const data = [
+  {
       AboutDevTypeText: "Welcome to my Portfolio! \n "
-    }
-  ];
+  }
+];
 
-var allElements = document.getElementsByClassName("typeing");
-for (var j = 0; j < allElements.length; j++) {
-  var currentElementId = allElements[j].id;
-  var currentElementIdContent = data[0][currentElementId];
-  var element = document.getElementById(currentElementId);
-  var devTypeText = currentElementIdContent;
-  var i = 0, isTag, text;
+const allElements = document.getElementsByClassName("typing");
+for (let j = 0; j < allElements.length; j++) {
+  const currentElementId = allElements[j].id;
+  const currentElementIdContent = data[0][currentElementId];
+  const element = document.getElementById(currentElementId);
+  const devTypeText = currentElementIdContent;
+  let i = 0, isTag, text;
+
   (function type() {
-    text = devTypeText.slice(0, ++i);
-    if (text === devTypeText) return;
-    element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
-    var char = text.slice(-1);
-    if (char === "<") isTag = true;
-    if (char === ">") isTag = false;
-    if (isTag) return type();
-    setTimeout(type, 60);
+      text = devTypeText.slice(0, ++i);
+      if (text === devTypeText) return;
+      element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
+      const char = text.slice(-1);
+      if (char === "<") isTag = true;
+      if (char === ">") isTag = false;
+      if (isTag) return type();
+      setTimeout(type, 60);
   })();
 }
 
+// Skills Data
 const skills = {
   linux: {
       title: "Linux",
@@ -43,17 +45,18 @@ const skills = {
   }
 };
 
+// Popup Functions
 function showSkillDetails(skillKey) {
   const skill = skills[skillKey];
   if (skill) {
       document.getElementById("popup-title").innerText = skill.title;
       document.getElementById("popup-description").innerText = skill.description;
       document.getElementById("popup-overlay").style.display = "block";
-      document.getElementById("skill-popup").style.display = "block"; 
+      document.getElementById("skill-popup").style.display = "block";
   }
 }
 
 function closePopup() {
   document.getElementById("popup-overlay").style.display = "none";
-  document.getElementById("skill-popup").style.display = "none"; 
+  document.getElementById("skill-popup").style.display = "none";
 }
